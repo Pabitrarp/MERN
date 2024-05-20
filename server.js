@@ -22,11 +22,11 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
 //Router Stich
-require("../backend/router/user.route.js")(app);//user routes
-require("../backend/router/admin.route.js")(app);//admin router
-require("../backend/router/vender.route.js")(app);//vender routes
-require("../backend/router/product.route.js")(app);//Product routes
-require("../backend/router/catagory.route.js")(app);//catgory routes
+require("./router/user.route.js")(app);//user routes
+require("./router/admin.route.js")(app);//admin router
+require("./router/vender.route.js")(app);//vender routes
+require("./router/product.route.js")(app);//Product routes
+require("./router/catagory.route.js")(app);//catgory routes
 app.listen(`${port}`,()=>{
     console.log(`run server in ${port} port`);
 })
